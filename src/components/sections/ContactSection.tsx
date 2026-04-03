@@ -3,10 +3,10 @@ import { useRef } from 'react';
 import { Mail, Phone, Linkedin, Github, MapPin } from 'lucide-react';
 
 const links = [
-  { icon: Mail, label: 'sohailpatel.dev@gmail.com', href: 'mailto:sohailpatel.dev@gmail.com' },
-  { icon: Phone, label: '+91 9353643513', href: 'tel:+919353643513' },
-  { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com/in/mohammedsohail-patel' },
-  { icon: Github, label: 'GitHub', href: 'https://github.com/SohailPatel' },
+  { icon: Mail, label: 'patelkhan175@gmail.com', href: 'mailto:patelkhan175@gmail.com' },
+  { icon: Phone, label: '+91 6363039682', href: 'tel:+916363039682' },
+  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/mohammedsohail-patel-6525b1180/' },
+  { icon: Github, label: 'GitHub', href: 'https://github.com/mdsohailpatel' },
   { icon: MapPin, label: 'Vijayapura, Karnataka, India', href: '#' },
 ];
 

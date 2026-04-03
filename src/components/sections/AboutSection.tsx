@@ -1,17 +1,25 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import { Code2, Layers, Globe } from 'lucide-react';
 
-const stats = [
-  { icon: Code2, value: '6+', label: 'Years Experience' },
-  { icon: Layers, value: '10+', label: 'Projects Delivered' },
-  { icon: Globe, value: '8+', label: 'Industry Domains' },
-];
+function calcYears() {
+  const start = new Date(2019, 7, 1); // Aug 2019
+  const now = new Date();
+  const diff = (now.getTime() - start.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
+  return Math.floor(diff) + '+';
+}
 
 export default function AboutSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const yearsExp = useMemo(calcYears, []);
+
+  const stats = [
+    { icon: Code2, value: yearsExp, label: 'Years Experience' },
+    { icon: Layers, value: '10+', label: 'Projects Delivered' },
+    { icon: Globe, value: '8+', label: 'Industry Domains' },
+  ];
 
   return (
     <section id="about" className="py-24 px-6" ref={ref}>
