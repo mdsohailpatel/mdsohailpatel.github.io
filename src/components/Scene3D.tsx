@@ -23,7 +23,7 @@ function FloatingShape({ position, scale, color, speed = 1, distort = 0.3 }: {
         <MeshDistortMaterial
           color={color}
           transparent
-          opacity={0.15}
+          opacity={0.18}
           distort={distort}
           speed={2}
           roughness={0.2}
@@ -48,7 +48,7 @@ function TorusShape({ position, scale, color }: {
     <Float speed={1.5} rotationIntensity={0.3} floatIntensity={1}>
       <mesh ref={mesh} position={position} scale={scale}>
         <torusGeometry args={[1, 0.3, 16, 32]} />
-        <meshStandardMaterial color={color} transparent opacity={0.12} wireframe />
+        <meshStandardMaterial color={color} transparent opacity={0.14} wireframe />
       </mesh>
     </Float>
   );
@@ -56,7 +56,7 @@ function TorusShape({ position, scale, color }: {
 
 function Particles() {
   const points = useRef<THREE.Points>(null!);
-  const count = 200;
+  const count = 250;
   const positions = new Float32Array(count * 3);
 
   for (let i = 0; i < count; i++) {
@@ -78,7 +78,7 @@ function Particles() {
           args={[positions, 3]}
         />
       </bufferGeometry>
-      <pointsMaterial size={0.02} color="#3B82F6" transparent opacity={0.6} sizeAttenuation />
+      <pointsMaterial size={0.025} color="#A855F7" transparent opacity={0.7} sizeAttenuation />
     </points>
   );
 }
@@ -87,15 +87,17 @@ export default function Scene3D() {
   return (
     <div className="absolute inset-0">
       <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
-        <ambientLight intensity={0.3} />
-        <pointLight position={[10, 10, 10]} intensity={0.5} color="#3B82F6" />
-        <pointLight position={[-10, -10, -5]} intensity={0.3} color="#06B6D4" />
+        <ambientLight intensity={0.4} />
+        <pointLight position={[10, 10, 10]} intensity={0.6} color="#A855F7" />
+        <pointLight position={[-10, -10, -5]} intensity={0.4} color="#EC4899" />
+        <pointLight position={[0, 5, 5]} intensity={0.3} color="#14B8A6" />
 
-        <FloatingShape position={[-3.5, 2, -2]} scale={1.8} color="#3B82F6" speed={0.8} distort={0.4} />
-        <FloatingShape position={[3.5, -1.5, -3]} scale={1.5} color="#06B6D4" speed={1.2} distort={0.3} />
-        <FloatingShape position={[0, 3, -4]} scale={1.2} color="#8B5CF6" speed={0.6} />
-        <TorusShape position={[-2, -2, -2]} scale={1} color="#3B82F6" />
-        <TorusShape position={[4, 2, -4]} scale={0.8} color="#06B6D4" />
+        <FloatingShape position={[-3.5, 2, -2]} scale={1.8} color="#A855F7" speed={0.8} distort={0.4} />
+        <FloatingShape position={[3.5, -1.5, -3]} scale={1.5} color="#EC4899" speed={1.2} distort={0.3} />
+        <FloatingShape position={[0, 3, -4]} scale={1.2} color="#F97316" speed={0.6} />
+        <FloatingShape position={[-1, -3, -3]} scale={1} color="#14B8A6" speed={1} distort={0.25} />
+        <TorusShape position={[-2, -2, -2]} scale={1} color="#A855F7" />
+        <TorusShape position={[4, 2, -4]} scale={0.8} color="#EC4899" />
         <Particles />
       </Canvas>
     </div>

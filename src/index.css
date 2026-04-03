@@ -6,38 +6,39 @@
 
 @layer base {
   :root {
-    --background: 222 47% 6%;
-    --foreground: 210 40% 95%;
+    --background: 230 25% 7%;
+    --foreground: 210 40% 96%;
 
-    --card: 222 47% 9%;
-    --card-foreground: 210 40% 95%;
+    --card: 230 25% 10%;
+    --card-foreground: 210 40% 96%;
 
-    --popover: 222 47% 9%;
-    --popover-foreground: 210 40% 95%;
+    --popover: 230 25% 10%;
+    --popover-foreground: 210 40% 96%;
 
-    --primary: 217 91% 60%;
-    --primary-foreground: 222 47% 6%;
+    --primary: 270 95% 65%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 187 94% 43%;
-    --secondary-foreground: 222 47% 6%;
+    --secondary: 330 90% 60%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 222 30% 14%;
-    --muted-foreground: 215 20% 55%;
+    --muted: 230 20% 15%;
+    --muted-foreground: 220 15% 55%;
 
-    --accent: 187 94% 43%;
-    --accent-foreground: 222 47% 6%;
+    --accent: 170 80% 50%;
+    --accent-foreground: 230 25% 7%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 222 30% 18%;
-    --input: 222 30% 18%;
-    --ring: 217 91% 60%;
+    --border: 230 20% 20%;
+    --input: 230 20% 20%;
+    --ring: 270 95% 65%;
 
     --radius: 0.75rem;
 
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(187 94% 43%));
-    --shadow-glow: 0 0 30px -5px hsl(217 91% 60% / 0.3);
+    --gradient-primary: linear-gradient(135deg, hsl(270 95% 65%), hsl(330 90% 60%), hsl(20 95% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(170 80% 50%), hsl(200 90% 55%));
+    --shadow-glow: 0 0 30px -5px hsl(270 95% 65% / 0.4);
   }
 }
 
@@ -59,7 +60,7 @@
 @layer utilities {
   .text-gradient {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(217 91% 60%), hsl(187 94% 43%));
+    background-image: linear-gradient(135deg, hsl(270 95% 65%), hsl(330 90% 60%), hsl(20 95% 60%));
   }
 
   .glass-card {
@@ -67,8 +68,8 @@
   }
 
   .glow-border {
-    box-shadow: 0 0 20px -5px hsl(217 91% 60% / 0.2),
-                inset 0 0 20px -5px hsl(217 91% 60% / 0.05);
+    box-shadow: 0 0 25px -5px hsl(270 95% 65% / 0.25),
+                inset 0 0 25px -5px hsl(270 95% 65% / 0.05);
   }
 }
 
@@ -81,14 +82,14 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(222 47% 6%);
+  background: hsl(230 25% 7%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(222 30% 18%);
+  background: hsl(230 20% 20%);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(217 91% 60% / 0.5);
+  background: hsl(270 95% 65% / 0.5);
 }
