@@ -8,7 +8,7 @@ const projects = [
     title: 'Trigoscope',
     subtitle: 'Aerospace Quality Management',
     description: 'Enterprise quality management platform for aerospace manufacturing with integrated Power BI dashboards, real-time defect tracking, and compliance reporting.',
-    tags: ['NestJS', 'Angular', 'Power BI', 'PostgreSQL', 'Socket.IO'],
+    tags: ['MEAN Stack', 'PostgreSQL', 'RabbitMQ', 'Socket.IO', 'Power BI', 'Redis', 'Docker', 'CI/CD'],
     color: 'hsl(217 91% 60%)',
   },
   {
@@ -16,7 +16,7 @@ const projects = [
     title: 'Abby Services',
     subtitle: 'Home Services Platform',
     description: 'Full-featured marketplace connecting homeowners with service providers. Includes booking management, real-time tracking, payment integration, and review system.',
-    tags: ['Node.js', 'Angular', 'MongoDB', 'Stripe', 'Redis'],
+    tags: ['Laravel', 'MYSQL', 'PHP', 'Payment Gateways', 'Redis', 'Docker'],
     color: 'hsl(187 94% 43%)',
   },
   {
@@ -24,7 +24,7 @@ const projects = [
     title: 'Admoove',
     subtitle: 'Digital Advertising Platform',
     description: 'Multi-channel advertising management system with campaign analytics, social media integration, budget optimization, and ROI tracking dashboards.',
-    tags: ['Laravel', 'Angular', 'MySQL', 'REST API', 'Charts'],
+    tags: ['Laravel', 'Angular', 'PHP', 'MySQL', 'Redis'],
     color: 'hsl(262 83% 58%)',
   },
   {
@@ -32,7 +32,7 @@ const projects = [
     title: 'HRMS ERP',
     subtitle: 'EdTech Management System',
     description: 'Comprehensive ERP system handling payroll processing, attendance tracking, compliance management, student enrollment, and academic performance analytics.',
-    tags: ['NestJS', 'Angular', 'PostgreSQL', 'Docker', 'CI/CD'],
+    tags: ['PHP', 'HTML', 'CSS', 'Bootstrap', 'JQuery', 'MYSQL'],
     color: 'hsl(142 71% 45%)',
   },
 ];
