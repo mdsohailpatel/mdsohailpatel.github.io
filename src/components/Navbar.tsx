@@ -37,6 +37,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => (
             <a
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               key={link.href}
               href={link.href}
               onClick={(e) => {
