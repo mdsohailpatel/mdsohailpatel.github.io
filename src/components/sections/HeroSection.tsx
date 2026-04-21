@@ -93,6 +93,11 @@ export default function HeroSection() {
             whileTap={{ scale: 0.95 }}
             className="px-8 py-3 rounded-lg text-sm font-semibold text-primary-foreground transition-all"
             style={{ backgroundImage: 'var(--gradient-primary)' }}
+            aria-label="View Projects"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+            }}
           >
             View Projects
           </motion.a>
@@ -101,6 +106,11 @@ export default function HeroSection() {
             whileHover={{ scale: 1.08, borderColor: 'hsl(270 95% 65%)' }}
             whileTap={{ scale: 0.95 }}
             className="px-8 py-3 rounded-lg text-sm font-semibold border border-border text-foreground hover:bg-muted transition-all"
+            aria-label="Get in Touch"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+            }}
           >
             Get in Touch
           </motion.a>
@@ -112,7 +122,14 @@ export default function HeroSection() {
         transition={{ repeat: Infinity, duration: 2 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
-        <a href="#about">
+        <a
+          href="#about"
+          aria-label="Scroll to About Section"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
           <ChevronDown className="w-6 h-6 text-muted-foreground" />
         </a>
       </motion.div>
