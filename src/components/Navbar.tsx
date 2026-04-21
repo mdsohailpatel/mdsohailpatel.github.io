@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 const links = [
-  { href: '#hero', label: 'Home' },
-  { href: '#about', label: 'About' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#contact', label: 'Contact' },
+  { href: '#hero', id:'hero', label: 'Home' },
+  { href: '#about', id:'about', label: 'About' },
+  { href: '#skills', id:'skills', label: 'Skills' },
+  { href: '#experience', id:'experience', label: 'Experience' },
+  { href: '#projects', id:'projects', label: 'Projects' },
+  { href: '#contact', id:'contact', label: 'Contact' },
 ];
 
 export default function Navbar() {
@@ -39,7 +39,10 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' });
+              }}
             >
               {link.label}
             </a>
